@@ -1,0 +1,112 @@
+include layout
+block services-cotent
+  section#services.services
+    .container
+      .section-title
+        h2 Quick First Aid Services
+        .row
+          a(href='symptomschecker')
+            .col-md-4.icon-box(data-aos='fade-up' data-aos-delay='100')
+              .icon
+                i.icofont-stethoscope-alt
+              h4.title
+                a(href='symptomschecker') Sypmtoms Checker
+              p.description Tell us how you feel and we will do the rest!
+          a(href='#' onclick='displayNotification()')
+            .col-md-4.icon-box(data-aos='fade-up' data-aos-delay='200')
+              .icon
+                i.icofont-hospital
+              h4.title
+                a(href='#') Find a hospital
+              p.description Turn on your location and we will get you in touch with the nearest hospital!
+          a(href='#' onclick='displayNotification()')
+            .col-md-4.icon-box(data-aos='fade-up' data-aos-delay='500')
+              .icon
+                i.icofont-doctor-alt
+              h4.title
+                a(href='#') Need to see a doctor?
+              p.description Book for an appointment with a doctor in your location!
+    footer#footer
+      .footer-top
+        .container
+          .row
+            .col-lg-3.col-md-6.footer-contact
+              h3 afri aid
+              p
+                | 30 ficticious street 
+                br
+                |               lagos, nigeria
+                br
+                |               nigeria 
+                br
+                br
+                strong Phone:
+                |  +234 07060737799
+                br
+                strong Email:
+                |  afriaid@example.com
+                br
+            .col-lg-2.col-md-6.footer-links
+              h4 Useful Links
+              ul
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Home
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') About us
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Services
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Terms of service
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Privacy policy
+            .col-lg-3.col-md-6.footer-links
+              h4 Our Services
+              ul
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+            .col-lg-4.col-md-6.footer-newsletter
+              h4 Join Our Newsletter
+              p you can subcribe to our weekly health newsletter below
+              form(action='' method='post')
+                input(type='email' name='email')
+                input(type='submit' value='Subscribe')
+      .container.d-md-flex.py-4
+        .mr-md-auto.text-center.text-md-left
+          .copyright
+            | &copy; Copyright 
+            strong
+              span afri aid
+            | . All Rights Reserved
+          .credits
+            | first aid app
+            a(href='') afri aid
+        .social-links.text-center.text-md-right.pt-3.pt-md-0
+          a.twitter(href='#')
+            i.bx.bxl-twitter
+          a.facebook(href='#')
+            i.bx.bxl-facebook
+          a.instagram(href='#')
+            i.bx.bxl-instagram
+          a.google-plus(href='#')
+            i.bx.bxl-skype
+          a.linkedin(href='#')
+            i.bx.bxl-linkedin
+

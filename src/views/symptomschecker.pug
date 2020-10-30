@@ -1,0 +1,183 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(content="width=device-width, initial-scale=1.0" name="viewport")
+    // All Vendor CSS Files
+    link(href="/stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet")
+    link(href="/stylesheets/icofont/icofont.min.css" rel="stylesheet")
+    link(href="/stylesheets/aos.css" rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/footer.css')
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous")
+    // Main CSS File
+    link(href="/stylesheets/symptoms.css" rel="stylesheet")
+    // Vendor JS File
+    script(src="/javascripts/jquery-1.12.2.min.js")
+    script(src="/javascripts/json2.js")
+    // json for ie7
+    script(src="/javascripts/jquery.imagemapster.js")
+    script(src="/javascripts/typeahead.bundle.js")
+    script(type="text/javascript").
+      $(document).ready(function () {
+      $("#symptomSelector").symptomSelector(
+      {
+      mode: "diagnosis",
+      webservice: "https://sandbox-healthservice.priaid.ch", //or for live data https://healthservice.priaid.ch
+      language: "en-gb", // You can change language here to de-ch, tr-tr...
+      specUrl: "sampleSpecialisationPage",// Here should come url for specialisations doctor search page
+      accessToken: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImlzaXF1ZWRhbkBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjgwMDgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3ZlcnNpb24iOiIyMDAiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL2xpbWl0IjoiOTk5OTk5OTk5IiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9tZW1iZXJzaGlwIjoiUHJlbWl1bSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbGFuZ3VhZ2UiOiJlbi1nYiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvZXhwaXJhdGlvbiI6IjIwOTktMTItMzEiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL21lbWJlcnNoaXBzdGFydCI6IjIwMjAtMTAtMjIiLCJpc3MiOiJodHRwczovL3NhbmRib3gtYXV0aHNlcnZpY2UucHJpYWlkLmNoIiwiYXVkIjoiaHR0cHM6Ly9oZWFsdGhzZXJ2aWNlLnByaWFpZC5jaCIsImV4cCI6MTYwNDAxODU5OSwibmJmIjoxNjA0MDExMzk5fQ.OGvTeaxuR22RhzWEMDPQXpcF0PdwUAnaJDtF8IQhxuU"
+      });
+      });
+  body
+    section(id='topbar')(class=['d-none d-lg-block'])
+        div(class=['container clearfix'])
+            div(class=['contact-info float-left'])
+                i(class=['icofont-envelope'])
+                    a(href='') afriaid.africa.com
+                i(class=['icofont-phone'])
+                    a(href='') +234 706 0737 799
+            div(class=['social-links float-right'])
+                a(href='')(class=['twitter'])
+                    i(class=['icofont-twitter'])
+                a(href='')(class=['facebook'])
+                    i(class=['icofont-facebook'])
+                a(href='')(class=['skype'])
+                    i(class=['icofont-skype'])
+                a(href='')(class=['linkedin'])
+                    i(class=['icofont-linkedin'])
+                a(href='')(class=['twitter'])
+                    i(class=['icofont-twitter'])
+    header(id='header')
+        div(class=['container'])
+            div(class=['logo float-left'])
+                h1(class=['text-light'])
+                    a(href="home")
+                        i(class=['icofont-first-aid-alt'])
+                            span afri aid
+            nav(class=['nav-menu float-right d-none d-lg-block'])
+                ul
+                    li(class=['active'])
+                        a(href="home")
+                            i(class=['icofont-home']) Home
+                    li
+                        a(href="")
+                            i(class=['icofont-home']) book an appointment
+                    li(class=['drop-down'])
+                        a(href="")
+                            i(class=['icofont-home']) first aid
+                        ul
+                            li
+                                a(href="") health tips
+                            li(class=['drop-down'])
+                                a(href="") first aid
+                                    //ul
+                                        li
+                                            a(href="") hey
+                                        li
+                                            a(href="") it's me
+                                        li
+                                            a(href="") i am the deep
+                                        li
+                                            a(href="") drop downn
+                                        li
+                                            a(href="") shh...
+                            li
+                                a(href="") med school
+                            li
+                                a(href="") quick videos
+                            li
+                                        a(href="") do you know
+                    li
+                        a(href="login")
+                            i(class=['icofont-login']) login
+    .container
+      .row
+        #symptomSelector.col-md-3
+        #symptomList.col-md-3
+        #selectedSymptomList.col-md-3
+        #diagnosisList.col-md-3
+    footer#footer
+      .footer-top
+        .container
+          .row
+            .col-lg-3.col-md-6.footer-contact
+              h3 afri aid
+              p
+                | 30 ficticious street 
+                br
+                |               lagos, nigeria
+                br
+                |               nigeria 
+                br
+                br
+                strong Phone:
+                |  +234 07060737799
+                br
+                strong Email:
+                |  afriaid@example.com
+                br
+            .col-lg-2.col-md-6.footer-links
+              h4 Useful Links
+              ul
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Home
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') About us
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Services
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Terms of service
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Privacy policy
+            .col-lg-3.col-md-6.footer-links
+              h4 Our Services
+              ul
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+            .col-lg-4.col-md-6.footer-newsletter
+              h4 Join Our Newsletter
+              p you can subcribe to our weekly health newsletter below
+              form(action='' method='post')
+                input(type='email' name='email')
+                input(type='submit' value='Subscribe')
+      .container.d-md-flex.py-4
+        .mr-md-auto.text-center.text-md-left
+          .copyright
+            | &copy; Copyright 
+            strong
+              span afri aid
+            | . All Rights Reserved
+          .credits
+            | first aid app
+            a(href='') afri aid
+        .social-links.text-center.text-md-right.pt-3.pt-md-0
+          a.twitter(href='#')
+            i.bx.bxl-twitter
+          a.facebook(href='#')
+            i.bx.bxl-facebook
+          a.instagram(href='#')
+            i.bx.bxl-instagram
+          a.google-plus(href='#')
+            i.bx.bxl-skype
+          a.linkedin(href='#')
+            i.bx.bxl-linkedin
+    script(src="/javascripts/selector.js")

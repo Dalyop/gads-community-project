@@ -1,0 +1,140 @@
+include layout
+block login-content
+    .container-fluid
+        .row
+            .col-sm-6.form
+                h2.login-side-display-text-left(style='display: none;') Let's get you started!
+                form#login-form(method='POST' action='#')
+                    label(for='Email Address') Username
+                    br
+                    input(type='email' placeholder='email' required='')
+                    br
+                    label(for='Password') Password
+                    br
+                    input(type='password' placeholder='password' required='')
+                    br
+                    button.submit-button Login 
+                        i.icofont-login
+                    br
+                    span#showReg.hint
+                    a(href='#' onclick='showRegisterForm()') Create account 
+                        i.icofont-info-circle
+                    span.forgot-password
+                        a(href='#') Forgot password 
+                            i.icofont-question-circle
+            .col-sm-6.login-side-display
+                h2.login-side-display-text-right First aid starter kit!
+                form#register-form(method='POST' action='#' style='display: none;')
+                    label(for='Last name') Last name
+                    br
+                    input(type='text' placeholder='Doe' required='')
+                    br
+                    label(for='First name') First name
+                    br
+                    input(type='email' placeholder='John' required='')
+                    br
+                    label(for='Email Address') Email address
+                    br
+                    input(type='email' placeholder='example@email.com' required='')
+                    br
+                    label(for='Password') Create Password
+                    br
+                    input(type='password' placeholder='Create password' required='')
+                    br
+                    label(for='Password') Confirm password
+                    br
+                    input(type='password' placeholder='Confirm password' required='')
+                    br
+                    button.submit-button Sign-up 
+                        i.icofont-sign-in
+                    br
+                    span.hint
+                        a(href='#' onclick='closeRegisterForm()') Have an account 
+                            i.icofont-info-circle
+                    span.forgot-password
+                        a(href='#') Need any help 
+                            i.icofont-question-circle
+    footer#footer
+      .footer-top
+        .container
+          .row
+            .col-lg-3.col-md-6.footer-contact
+              h3 afri aid
+              p
+                | 30 ficticious street 
+                br
+                |               lagos, nigeria
+                br
+                |               nigeria 
+                br
+                br
+                strong Phone:
+                |  +234 07060737799
+                br
+                strong Email:
+                |  afriaid@example.com
+                br
+            .col-lg-2.col-md-6.footer-links
+              h4 Useful Links
+              ul
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Home
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') About us
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Services
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Terms of service
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') Privacy policy
+            .col-lg-3.col-md-6.footer-links
+              h4 Our Services
+              ul
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+                li
+                  i.bx.bx-chevron-right
+                  a(href='#') list of items
+            .col-lg-4.col-md-6.footer-newsletter
+              h4 Join Our Newsletter
+              p you can subcribe to our weekly health newsletter below
+              form(action='' method='post')
+                input(type='email' name='email')
+                input(type='submit' value='Subscribe')
+      .container.d-md-flex.py-4
+        .mr-md-auto.text-center.text-md-left
+          .copyright
+            | &copy; Copyright 
+            strong
+              span afri aid
+            | . All Rights Reserved
+          .credits
+            | first aid app
+            a(href='') afri aid
+        .social-links.text-center.text-md-right.pt-3.pt-md-0
+          a.twitter(href='#')
+            i.bx.bxl-twitter
+          a.facebook(href='#')
+            i.bx.bxl-facebook
+          a.instagram(href='#')
+            i.bx.bxl-instagram
+          a.google-plus(href='#')
+            i.bx.bxl-skype
+          a.linkedin(href='#')
+            i.bx.bxl-linkedin
+    script(src='/javascripts/app.js')
